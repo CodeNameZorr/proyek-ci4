@@ -1,0 +1,145 @@
+/* VARIABEL WARNA */
+:root {
+    --tokopedia-main: #42b549;       /* Hijau Utama */
+    --tokopedia-hover: #389e3e;      /* Hijau Gelap (Hover) */
+    --tokopedia-light: #ebffef;      /* Hijau Muda (Background Menu) */
+    --bg-body: #f3f4f6;              /* Abu-abu muda untuk background luar */
+    --text-dark: #333333;
+    --text-grey: #6c757d;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    margin: 0;
+    overflow-x: hidden; /* Hindari scroll samping */
+}
+
+/* UTILITIES */
+.bg-tokopedia {
+    background-color: var(--tokopedia-main) !important;
+    color: white !important;
+}
+
+.text-tokopedia {
+    color: var(--tokopedia-main) !important;
+}
+
+.btn-tokopedia {
+    background-color: var(--tokopedia-main);
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px; /* Sudut membulat modern */
+    transition: all 0.3s;
+}
+
+.btn-tokopedia:hover {
+    background-color: var(--tokopedia-hover);
+    color: white;
+    transform: translateY(-1px); /* Efek naik dikit pas hover */
+    box-shadow: 0 4px 6px rgba(66, 181, 73, 0.2);
+}
+
+/* LAYOUT STRUCTURE (PENTING BIAR GAK PENDEK) */
+.wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Pastikan tinggi minimal selayar penuh */
+}
+
+/* SIDEBAR */
+.sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background: #ffffff;
+    color: var(--text-dark);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 25px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+    flex: 1; /* Biar list menu ngisi ruang kosong */
+}
+
+.sidebar ul li a {
+    padding: 15px 25px;
+    font-size: 15px;
+    display: block;
+    color: var(--text-grey);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    border-left: 4px solid transparent; /* Garis indikator di kiri */
+}
+
+.sidebar ul li a:hover {
+    color: var(--tokopedia-main);
+    background: var(--tokopedia-light);
+}
+
+.sidebar ul li a.active {
+    color: var(--tokopedia-main);
+    background: var(--tokopedia-light);
+    border-left: 4px solid var(--tokopedia-main); /* Garis hijau aktif */
+}
+
+/* CONTENT AREA */
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Konten minimal selayar */
+}
+
+.navbar {
+    background: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.main-content {
+    padding: 30px;
+    flex: 1; /* Dorong footer ke bawah */
+}
+
+/* CARDS & TABLES */
+.card-stat {
+    border: none;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.card-stat:hover {
+    transform: translateY(-5px); /* Efek hover naik */
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+}
+
+/* LOGIN PAGE */
+.login-body {
+    background: linear-gradient(135deg, #e0f7e4 0%, #ffffff 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
